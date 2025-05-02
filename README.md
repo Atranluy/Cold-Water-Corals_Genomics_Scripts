@@ -28,3 +28,4 @@ This folder includes scripts to:
 
 ## Prerequisites
 - Installed dependencies: Bash, Python, R, and other relevant bioinformatics tools (e.g., FastQC, Fastp, BWA-MEM, GATK, BCFtools, VCFtools....).
+- Depending of the cluster/machine you may use, you can generate a mamba environment (conda like environment) and install all theses software within this environment with bioconda.
