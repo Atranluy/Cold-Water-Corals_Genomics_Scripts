@@ -2,20 +2,18 @@
 # config.sh - Generic configuration file for project paths and settings
 
 # Base project directory
-MAIN_DIR="/path/to/project/"
+MAIN_DIR="my_path/to/the/working_folder/Cold-Water-Coral_Genomics_Scripts-main/Assembly_Scripts"
 
 # Data directories
 INPUT_DIR_FASTQ="${MAIN_DIR}/data/input"              # Directory for input data files, can contain symlinks to raw data
 
 ##### Step 1: Concatenated fastq files
 OUTPUT_DIR_CONCAT="${MAIN_DIR}/data/concat"           # Directory for concatenated fastq files (optional if only one lane used)
+
 ##### Step 2: Fastp-filtered fastq files
-OUTPUT_DIR_FASTQC="${MAIN_DIR}/data/fastQC"             # Directory for fastq files filtered with Fastp
+OUTPUT_DIR_FASTP="${MAIN_DIR}/data/FASTP"             # Directory for fastq files filtered with Fastp
 
-##### Step 3: Fastp-filtered fastq files
-OUTPUT_DIR_FASTP="${MAIN_DIR}/data/fastp"             # Directory for fastq files filtered with Fastp
-
-##### Step 4: Assembly-related directories
+##### Step 3: Assembly-related directories
 OUTPUT_DIR_MAIN="${MAIN_DIR}/data/output/ASSEMBLY"    # Directory for intermediate outputs during assembly
 
 # Final outputs
@@ -36,7 +34,7 @@ TEMP_DIR="${MAIN_DIR}/temp"
 export TMPDIR="${TEMP_DIR}"                             # Set TMPDIR for system-wide temp storage
 
 # Create all necessary directories
-mkdir -p "$MAIN_DIR" "$INPUT_DIR_FASTQ" "$OUTPUT_DIR_FASTQC" "$OUTPUT_DIR_CONCAT" "$OUTPUT_DIR_FASTP" \
+mkdir -p "$MAIN_DIR" "$INPUT_DIR_FASTQ" "$OUTPUT_DIR_CONCAT" "$OUTPUT_DIR_FASTP" \
          "$OUTPUT_DIR_MAIN" "$OUTPUT_FINAL_BAM" "$OUTPUT_FINAL_VCF" \
          "$SCRIPT_OUTPUT" "$SCRIPTS" "$TEMP_DIR"
 

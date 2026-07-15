@@ -83,4 +83,4 @@ samtools index ${OUTPUT_FINAL}/\${IND}_Paired_mapped_sorted_markdup_rg.bam
 EOF
 
 # Submitting the script (array_ALL_PIPE.sh) for execution using qsub
-qsub array_ALL_PIPE.sh
+#qsub array_ALL_PIPE.sh

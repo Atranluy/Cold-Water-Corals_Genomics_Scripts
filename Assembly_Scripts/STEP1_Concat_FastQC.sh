@@ -32,6 +32,8 @@ SAMPLE=\$(awk -v ITER=\${PBS_ARRAY_INDEX} '{if(NR==ITER) print \$1}' \${POPMAP})
 mkdir -p \${OUTPUT_DIR_CONCAT}
 
 # Merge R1 FASTQ files for the sample across lanes
+#### Please adapt this to your files ####
+
 echo "Merging \${INPUT_DIR_FASTQ}/\${SAMPLE}_L002_R1.fastq.gz \${INPUT_DIR_FASTQ}/\${SAMPLE}_L003_R1.fastq.gz > \${OUTPUT_DIR_CONCAT}/\${SAMPLE}_R1.fastq.gz"
 cat \${INPUT_DIR_FASTQ}/\${SAMPLE}_L002_R1.fastq.gz \${INPUT_DIR_FASTQ}/\${SAMPLE}_L003_R1.fastq.gz > \${OUTPUT_DIR_CONCAT}/\${SAMPLE}_R1.fastq.gz
 

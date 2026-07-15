@@ -7,8 +7,6 @@
 
 source "/path/to/project/SCRIPTS/config.sh"
 cd ${SCRIPTS}
-
-
 # Set the directories for output and input
 OUTPUT=${OUTPUT_DIR_FASTQC}
 INPUT=${OUTPUT_DIR_CONCAT}
@@ -44,4 +42,4 @@ fastqc "${INPUT}/\${IND}_R2.fastq.gz" -o "${OUTPUT}"
 EOF
 
 # Submit the FASTQC array job script to the queue
-qsub FASTQC_Array.sh
+#qsub FASTQC_Array.sh
