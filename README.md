@@ -1,5 +1,5 @@
 # Cold-Water-Coral_Genomics_Scripts
-
+(In progress)
 Scripts for Whole-genome data assembly and analysis for the CWC project.
 
 ## Overview
